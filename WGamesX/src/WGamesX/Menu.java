@@ -52,8 +52,31 @@ public class Menu {
 			switch (opcao) {
 
 			case 1:
-				System.out.println(Cores.TEXT_GREEN_BOLD_BRIGHT + "\n\nCatalógo de Jogos\n\n");
-				games.listarTodas();
+				
+				System.out.println(Cores.TEXT_GREEN_BOLD_BRIGHT +Cores.ANSI_BLACK_BACKGROUND+
+						           "_____________________________________________________");
+				System.out.println("\n            Catalógo de Jogos                      ");
+				System.out.println("                                                     ");
+				System.out.println("                                                     ");
+				System.out.println("            1 - Todos os Jogos                       ");
+				System.out.println("            2 - Sports                               ");
+				System.out.println("            3 - Fps                                  ");
+				System.out.println("            4 - BattleRoyal                          ");
+				System.out.println("            5 - Open World                           ");
+				System.out.println("            6 - Race                                 ");
+				System.out.println("                                                     ");
+				System.out.println("_____________________________________________________");
+				System.out.println("Entre com a opção desejada:                          ");
+				System.out.println("                                                     " + Cores.TEXT_RESET);
+				
+				int selecao = leia.nextInt();
+				
+				if(selecao == 1) {
+					games.listarTodas();
+				} else {
+					games.listar(selecao);
+				}
+				
 				do {
 					System.out.println("\n\n'Para sair digite 0'");
 					System.out.println("\nSelecione os jogos (numero): ");
